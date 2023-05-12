@@ -1,14 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+import NavTest from "./Components/NavTest";
+import SideBar from "./Components/SideBar";
+import Test from "./Components/Test";
+import Test2 from "./Components/Test2";
 
 function App() {
   return (
     <>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
+      <NavTest />
+      {/* <SideBar /> */}
+      <Test />
+      {/* <Test2 /> */}
     </>
   );
 }
