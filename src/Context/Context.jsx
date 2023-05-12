@@ -5,9 +5,10 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [state, setState] = useState();
   const [num, setNum] = useState();
+  const [open, setOpen] = useState(true);
 
   return (
-    <AppContext.Provider value={{ state, setState, num, setNum }}>
+    <AppContext.Provider value={{ open, setOpen }}>
       {children}
     </AppContext.Provider>
   );
