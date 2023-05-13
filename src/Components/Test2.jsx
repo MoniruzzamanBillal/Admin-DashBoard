@@ -1,9 +1,18 @@
 import { HideImage, HideSourceSharp } from "@mui/icons-material";
 
-import React from "react";
+import React, { PureComponent } from "react";
 import { GlobalContext } from "../Context/Context";
 
 export default function Test2() {
   const { open, setOpen } = GlobalContext();
-  return <></>;
+
+  return (
+    <>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+    </>
+  );
 }

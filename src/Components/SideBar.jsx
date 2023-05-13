@@ -4,7 +4,6 @@ import HomePage from "../Pages/HomePage";
 import { GlobalContext } from "../Context/Context";
 
 export default function SideBar() {
-  // const [open, setOpen] = useState(true);
   const { open, setOpen } = GlobalContext();
   const Menus = [
     {
