@@ -1,5 +1,5 @@
 import React from "react";
-import { GlobalContext } from "../Context/Context";
+import { GlobalContext } from "../../Context/Context";
 
 export default function Features() {
   const { open, setOpen } = GlobalContext();

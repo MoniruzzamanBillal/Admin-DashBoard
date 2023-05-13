@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
-import { GlobalContext } from "../Context/Context";
+import HomePage from "../../Pages/HomePage";
+import { GlobalContext } from "../../Context/Context";
 
 export default function SideBar() {
   const { open, setOpen } = GlobalContext();

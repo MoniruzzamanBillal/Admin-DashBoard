@@ -1,7 +1,7 @@
 import { HideImage, HideSourceSharp } from "@mui/icons-material";
 
 import React, { PureComponent } from "react";
-import { GlobalContext } from "../Context/Context";
+import { GlobalContext } from "../../Context/Context";
 import {
   LineChart,
   Line,
@@ -18,53 +18,53 @@ export default function HomeChart() {
   const data = [
     {
       name: "Jan",
-      active_user: 4000,
+      active_user: 100,
     },
     {
       name: "Feb",
-      active_user: 3000,
+      active_user: 300,
     },
     {
       name: "Mar",
-      active_user: 2000,
+      active_user: 280,
     },
     {
       name: "apr",
-      active_user: 4000,
+      active_user: 400,
     },
     {
       name: "may",
-      active_user: 3000,
+      active_user: 300,
     },
     {
       name: "june",
-      active_user: 2000,
+      active_user: 200,
     },
     {
       name: "july",
-      active_user: 4000,
+      active_user: 400,
     },
     {
       name: "sept",
-      active_user: 3000,
+      active_user: 350,
     },
     {
       name: "oct",
-      active_user: 2050,
+      active_user: 205,
     },
     {
       name: "nov",
-      active_user: 2200,
+      active_user: 220,
     },
     {
       name: "dec",
-      active_user: 4000,
+      active_user: 480,
     },
   ];
 
   return (
     <>
-      <div className="graphContainer w-full p-4 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100">
+      <div className="graphContainer w-full p-4 mb-5 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100">
         <h1 className="font-semibold text-2xl">Active user details</h1>
         <div className="graph">
           <ResponsiveContainer width="100%" aspect={3 / 1}>
