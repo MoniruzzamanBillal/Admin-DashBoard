@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #bfc0c4;
+}
+
 body::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
   cursor: pointer;
