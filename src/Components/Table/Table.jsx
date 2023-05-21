@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { AiFillDelete } from "react-icons/ai";
 import { userRows } from "../DummyData/DummyData";
 import { Link } from "react-router-dom";
 
 export default function Table() {
+  const [dataRow, setDataRow] = useState(userRows);
+  const handleDelete = (id) => {
+    let filterData = dataRow.filter((ele) => {
+      return ele.id != id;
+    });
+
+    setDataRow(filterData);
+  };
+
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
     {
@@ -68,7 +77,7 @@ export default function Table() {
                 <Link to={`/users${params.row.id}`}>
                   <button
                     type="button"
-                    class="text-white w-[100%] bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 "
+                    className="text-white w-[100%] bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 "
                   >
                     Edit
                   </button>
@@ -77,7 +86,10 @@ export default function Table() {
               {/* left Side endss  */}
               {/* right Side starts  */}
               <div className="rightSIde self-center ">
-                <AiFillDelete className="text-3xl cursor-pointer text-red-800" />
+                <AiFillDelete
+                  className="text-3xl cursor-pointer text-red-800"
+                  onClick={() => handleDelete(params.row.id)}
+                />
               </div>
               {/* right Side endss  */}
             </div>
@@ -93,7 +105,7 @@ export default function Table() {
         <div className="tableWrapper bg-gray-100 h-[100%] m-auto">
           <div style={{ height: "88%", width: "100%" }}>
             <DataGrid
-              rows={userRows}
+              rows={dataRow}
               columns={columns}
               initialState={{
                 pagination: {
