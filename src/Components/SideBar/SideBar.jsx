@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomePage from "../../Pages/HomePage";
 import { GlobalContext } from "../../Context/Context";
+import Table from "../Table/Table";
 
 export default function SideBar() {
   const { open, setOpen } = GlobalContext();
@@ -39,7 +40,7 @@ export default function SideBar() {
         <div className="flex">
           <div
             className={`mainContainer ${
-              open ? "w-72" : "w-20 "
+              open ? "w-52" : "w-20 "
             }  bg-gray-900 h-screen p-5 pt-5 relative duration-300`}
           >
             {/* arrow button starts  */}
@@ -103,10 +104,11 @@ export default function SideBar() {
       {/* sidebar child components starts */}
       <div
         className={`${
-          open ? "ml-72" : "ml-20 "
-        } duration-300 h-screen p-6   mt-16`}
+          open ? "ml-52" : "ml-20 "
+        } duration-300 h-screen px-4 py-2 mt-16`}
       >
-        <HomePage />
+        {/* <HomePage /> */}
+        <Table />
       </div>
       {/* sidebar child components ends */}
     </>
